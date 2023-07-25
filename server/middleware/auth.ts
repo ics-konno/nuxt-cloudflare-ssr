@@ -8,6 +8,10 @@ function mapCredentialsToBasicAuthHeaders(
     .map((credentials) => `Basic ${btoa(credentials)}`);
 }
 
+/**
+ * Nuxt3のベーシック認証
+ * @see https://titouan.dev/notes/2023/03/10/basic-auth-middleware-nuxt-3
+ */
 export default defineEventHandler((event) => {
   const { basicAuth } = useRuntimeConfig();
 
